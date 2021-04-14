@@ -11,7 +11,7 @@ before_script:
 
 script:
   - docker --version
-  - docker build -t udagram-api-users --build-arg POSTGRES_USERNAME=${POSTGRES_USERNAME} --build-arg POSTGRES_PASSWORD=${POSTGRES_PASSWORD} --build-arg POSTGRES_DB=${POSTGRES_DB} --build-arg POSTGRES_HOST=${POSTGRES_HOST} --build-arg AWS_REGION=${AWS_REGION} --build-arg AWS_PROFILE=${AWS_PROFILE} --build-arg AWS_BUCKET=${AWS_BUCKET} --build-arg URL=${URL} --build-arg JWT_SECRET=${JWT_SECRET} .
+  - docker build -t udagram-api-feeds --build-arg POSTGRES_USERNAME=${POSTGRES_USERNAME} --build-arg POSTGRES_PASSWORD=${POSTGRES_PASSWORD} --build-arg POSTGRES_DB=${POSTGRES_DB} --build-arg POSTGRES_HOST=${POSTGRES_HOST} --build-arg AWS_REGION=${AWS_REGION} --build-arg AWS_PROFILE=${AWS_PROFILE} --build-arg AWS_BUCKET=${AWS_BUCKET} --build-arg URL=${URL} --build-arg JWT_SECRET=${JWT_SECRET} .
   - docker tag udagram-api-feeds xthian82/udagram-api-feeds
 
 after_success:
